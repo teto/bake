@@ -912,9 +912,9 @@ class GitModuleSource(ModuleSource):
             env._logger.commands.write('  No perceived changes on the local repository.\n')
 
         
-#        env.run(['git', 'fetch'], directory=env.srcdir)
-#        env.run(['git', 'checkout', self.attribute('revision').value],
-#                          directory=env.srcdir)
+        env.run(['git', 'fetch', '--tags'], directory=env.srcdir)
+        env.run(['git', 'checkout', self.attribute('revision').value],
+                          directory=env.srcdir)
 
     def check_version(self, env):
         """ Checks if the tool is available and with the needed version."""
