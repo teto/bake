@@ -1,0 +1,7 @@
+*.pyc
+Config
+bakeSetEnv.sh
+bakefile.xml
+build/
+source/
+
